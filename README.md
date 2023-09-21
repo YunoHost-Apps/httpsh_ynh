@@ -19,14 +19,14 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 This package is based on two projects:
 
 * [ttyd](https://tsl0922.github.io/ttyd) is a TTY (terminal) web server
-* [httpsh](https://github.com/leshniak/httpsh) is a script that is called by ttyd
+* [httpsh](https://github.com/leshniak/httpsh) is a login script that is called by ttyd
 
 
 **Shipped version:** 1.7.3~ynh1
 
 ## Screenshots
 
-![Screenshot of httpsh on ttyd](./doc/screenshots/example.jpg)
+![Screenshot of httpsh on ttyd](./doc/screenshots/httpsh.png)
 
 ## Documentation and resources
 

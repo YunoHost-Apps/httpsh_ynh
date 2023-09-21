@@ -16,14 +16,16 @@ Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) po
 
 ## Vue d’ensemble
 
-Ceci est une fausse description des fonctionalités de l'app
+Ce paquet est basé sur deux projets :
+* [ttyd](https://tsl0922.github.io/ttyd) est un serveur web TTY (terminal)
+* [httpsh](https://github.com/leshniak/httpsh) est un script de connection appelé par ttyd
 
 
 **Version incluse :** 1.7.3~ynh1
 
 ## Captures d’écran
 
-![Capture d’écran de httpsh on ttyd](./doc/screenshots/example.jpg)
+![Capture d’écran de httpsh on ttyd](./doc/screenshots/httpsh.png)
 
 ## Documentations et ressources
 
