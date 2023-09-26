@@ -53,8 +53,8 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
+    ynh_setup_source --source_id=ttyd --dest_dir="$install_dir/ttyd"
+    ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 fi
 
 # $install_dir will automatically be initialized with some decent

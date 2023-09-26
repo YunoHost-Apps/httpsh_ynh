@@ -16,6 +16,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=1
 
+ynh_setup_source --source_id=ttyd --dest_dir="$install_dir/ttyd"
 ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 
 # TODO: copy files where needed

@@ -44,6 +44,28 @@ ram.runtime = "10M"
     default = "all_users"
 
 [resources]
+    [resources.sources.ttyd]
+    format = "whatever"
+    rename = "ttyd"
+
+    armhf.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.armhf"
+    armhf.sha256 = "b0784080bd78f0a5916462672f461542c607f8ea7cee56b075e8cd04e1ffcc4d"
+
+    arm64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.aarch64"
+    arm64.sha256 = "c77fbb475a767c8f2d52c1fd28f167eb115a3b10ff114920d38c13f8ad4fcfbd"
+
+    i386.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.i686"
+    i386.sha256 = "0ad0feb6ed0f356cfbc70a2c6009d99dc528a43686363e5fb6580410294ea60d"
+
+    amd64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64"
+    amd64.sha256 = "67cf926ddf157dcb089106c2aa6623b8613bb7f3b493048eeb6cc34423570b3c"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.armhf = "ttyd.armhf"
+    autoupdate.asset.arm64 = "ttyd.aarch64"
+    autoupdate.asset.i386 = "ttyd.i686"
+    autoupdate.asset.amd64 = "ttyd.x86_64"
+
     [resources.sources.httpsh]
     url = "https://github.com/leshniak/httpsh/archive/7d80fac0d48f30e29eaff9a7471399c19ad31518.tar.gz"
     sha256 = "cc7354752e80e1563e80271b7253c0f293346cd46cdfe4858dcf68865e573d30"
@@ -56,6 +78,3 @@ ram.runtime = "10M"
     main.url = "/"
 
     [resources.ports]
-
-    [resources.apt]
-    packages = ["ttyd"]
