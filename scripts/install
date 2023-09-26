@@ -19,7 +19,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 
 # TODO: copy files where needed
-mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh"
+mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-login"
 
 ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
