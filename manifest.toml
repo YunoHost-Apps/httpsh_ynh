@@ -37,7 +37,7 @@ ram.runtime = "10M"
 
     [install.path]
     type = "path"
-    default = "/example"
+    default = "/httpsh"
 
     [install.init_main_permission]
     type = "group"
