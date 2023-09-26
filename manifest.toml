@@ -43,12 +43,6 @@ ram.runtime = "10M"
     type = "group"
     default = "all_users"
 
-    [install.custom_command]
-    help.en = "A custom command to run in ttyd instead of `login`. Not recommended to change unless you know what you are doing!"
-    help.fr = "Une commande personnalisée à lancer au lieu de `login`. Non recommandé de changer à part si vous savez ce que vous faites !"
-    type = "string"
-    default = "login"
-
 [resources]
     [resources.sources.httpsh]
     url = "https://github.com/leshniak/httpsh/archive/7d80fac0d48f30e29eaff9a7471399c19ad31518.tar.gz"
