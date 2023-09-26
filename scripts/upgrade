@@ -55,6 +55,7 @@ then
 
     # Download, check integrity, uncompress and patch the source from app.src
     ynh_setup_source --source_id=ttyd --dest_dir="$install_dir/ttyd"
+    chmod +x "$install_dir/ttyd"
     ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 fi
 
