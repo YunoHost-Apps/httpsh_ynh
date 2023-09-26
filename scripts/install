@@ -26,6 +26,7 @@ mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-logi
 ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
 chown -R "$app:$app" "$install_dir"
+chmod 750 "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -40,8 +41,9 @@ yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/
 
 mkdir "/var/log/$app"
 touch "/var/log/$app/$app.log"
+
 chown -R "$app:$app" "/var/log/$app"
-chmod -R 750 "/var/log/$app"
+chmod 750 "/var/log/$app"
 
 ynh_use_logrotate
 
