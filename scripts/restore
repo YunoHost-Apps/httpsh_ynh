@@ -34,6 +34,8 @@ yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/
 mkdir "/var/log/$app"
 touch "/var/log/$app/$app.log"
 chown -R "$app:$app" "/var/log/$app"
+chmod -R 750 "/var/log/$app"
+
 
 ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 

@@ -36,6 +36,11 @@ ynh_add_systemd_config
 
 yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/var/log/$app/$app.log"
 
+mkdir "/var/log/$app"
+touch "/var/log/$app/$app.log"
+chown -R "$app:$app" "/var/log/$app"
+chmod -R 750 "/var/log/$app"
+
 ynh_use_logrotate
 
 ynh_add_fail2ban_config --logpath="/var/log/$app/$app.log" --failregex="^error: maximum authentication attempts exceeded for <F-USER>.*</F-USER> from <HOST>$"
