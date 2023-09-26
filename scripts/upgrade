@@ -87,7 +87,7 @@ ynh_script_progression --message="Updating a configuration file..." --weight=1
 # TODO: copy files where needed
 mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh"
 
-ynh_add_config --template="../conf/ttyd_httphs.conf" --destination="$install_dir/ttyd_httphs.conf"
+ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
 chown -R "$app:$app" "$install_dir"
 
