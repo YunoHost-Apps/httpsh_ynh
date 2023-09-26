@@ -16,14 +16,17 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=1
 
+ynh_setup_source --source_id=ttyd --dest_dir="$install_dir"
+chmod +x "$install_dir/ttyd"
 ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 
 # TODO: copy files where needed
-mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh"
+mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-login"
 
-ynh_add_config --template="ttyd_httphs.conf" --destination="$install_dir/ttyd_httphs.conf"
+ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
 chown -R "$app:$app" "$install_dir"
+chmod 750 "$install_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -35,6 +38,12 @@ ynh_add_nginx_config
 ynh_add_systemd_config
 
 yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/var/log/$app/$app.log"
+
+mkdir "/var/log/$app"
+touch "/var/log/$app/$app.log"
+
+chown -R "$app:$app" "/var/log/$app"
+chmod 750 "/var/log/$app"
 
 ynh_use_logrotate
 

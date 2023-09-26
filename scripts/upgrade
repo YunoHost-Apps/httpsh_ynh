@@ -26,14 +26,14 @@ upgrade_type=$(ynh_check_app_version_changed)
 
 # If db_name doesn't exist, create it
 #if [ -z "$db_name" ]; then
-#	db_name=$(ynh_sanitize_dbid --db_name=$app)
-#	ynh_app_setting_set --app=$app --key=db_name --value=$db_name
+#    db_name=$(ynh_sanitize_dbid --db_name=$app)
+#    ynh_app_setting_set --app=$app --key=db_name --value=$db_name
 #fi
 
 # If install_dir doesn't exist, create it
 #if [ -z "$install_dir" ]; then
-#	install_dir=/var/www/$app
-#	ynh_app_setting_set --app=$app --key=install_dir --value=$install_dir
+#    install_dir=/var/www/$app
+#    ynh_app_setting_set --app=$app --key=install_dir --value=$install_dir
 #fi
 
 #=================================================
@@ -51,16 +51,16 @@ ynh_systemd_action --service_name="$app" --action="stop" --log_path="/var/log/$a
 
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Upgrading source files..." --weight=1
+    ynh_script_progression --message="Upgrading source files..." --weight=1
 
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$install_dir"
+    # Download, check integrity, uncompress and patch the source from app.src
+    ynh_setup_source --source_id=ttyd --dest_dir="$install_dir"
+    chmod +x "$install_dir/ttyd"
+    ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 fi
 
-# $install_dir will automatically be initialized with some decent
-# permissions by default ... however, you may need to recursively reapply
-# ownership to all files such as after the ynh_setup_source step
-chown -R "$app:$app" "$install_dir"
+chown -R "$app:$app" "/var/log/$app"
+chmod 750 "/var/log/$app"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -71,11 +71,11 @@ ynh_add_nginx_config
 
 ynh_add_systemd_config
 
-yunohost service add "$app" --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/var/log/$app/$app.log"
 
 ynh_use_logrotate --non-append
 
-ynh_add_fail2ban_config --logpath="/var/log/nginx/${domain}-error.log" --failregex="Regex to match into the log for a failed login"
+ynh_add_fail2ban_config --logpath="/var/log/$app/$app.log" --failregex="^error: maximum authentication attempts exceeded for <F-USER>.*</F-USER> from <HOST>$"
 
 #=================================================
 # RECONFIGURE THE APP (UPDATE CONF, APPLY MIGRATIONS...)
@@ -87,9 +87,10 @@ ynh_script_progression --message="Updating a configuration file..." --weight=1
 # TODO: copy files where needed
 mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh"
 
-ynh_add_config --template="ttyd_httphs.conf" --destination="$install_dir/ttyd_httphs.conf"
+ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
-chown -R "$app:$app" "$install_dir"
+chown -R "$app:$app" "/var/log/$app"
+chmod 750 "/var/log/$app"
 
 #=================================================
 # START SYSTEMD SERVICE
