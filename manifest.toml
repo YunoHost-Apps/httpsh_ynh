@@ -62,6 +62,7 @@ ram.runtime = "10M"
     amd64.sha256 = "67cf926ddf157dcb089106c2aa6623b8613bb7f3b493048eeb6cc34423570b3c"
 
     autoupdate.strategy = "latest_github_release"
+    autoupdate.upstream = "https://github.com/tsl0922/ttyd"
     autoupdate.asset.armhf = "ttyd.armhf"
     autoupdate.asset.arm64 = "ttyd.aarch64"
     autoupdate.asset.i386 = "ttyd.i686"
