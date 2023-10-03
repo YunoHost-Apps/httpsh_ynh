@@ -31,7 +31,6 @@ Ce paquet est basé sur deux projets :
 
 * Documentation officielle de l’admin : <https://github.com/tsl0922/ttyd/wiki/Example-Usage>
 * Dépôt de code officiel de l’app : <https://github.com/leshniak/httpsh>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_httpsh>
 * Signaler un bug : <https://github.com/YunoHost-Apps/httpsh_ynh/issues>
 
 ## Informations pour les développeurs
