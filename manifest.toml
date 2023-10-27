@@ -21,7 +21,7 @@ fund = "https://github.com/sponsors/tsl0922"
 
 [integration]
 yunohost = ">= 11.1.21"
-architectures = ["i386", "amd64", "arm64", "armhf"]
+architectures = "all"
 multi_instance = true
 
 ldap = false
