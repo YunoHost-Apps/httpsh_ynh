@@ -32,6 +32,7 @@ This package is based on two projects:
 
 * Official admin documentation: <https://github.com/tsl0922/ttyd/wiki/Example-Usage>
 * Upstream app code repository: <https://github.com/leshniak/httpsh>
+* YunoHost Store: <https://apps.yunohost.org/app/httpsh>
 * Report a bug: <https://github.com/YunoHost-Apps/httpsh_ynh/issues>
 
 ## Developer info
