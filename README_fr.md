@@ -21,7 +21,7 @@ Ce paquet est basé sur deux projets :
 * [httpsh](https://github.com/leshniak/httpsh) est un script de connection appelé par ttyd
 
 
-**Version incluse :** 1.7.3~ynh1
+**Version incluse :** 1.7.4~ynh2
 
 ## Captures d’écran
 
