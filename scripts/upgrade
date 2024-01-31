@@ -59,8 +59,8 @@ then
     ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 fi
 
-chown -R "$app:$app" "/var/log/$app"
-chmod 750 "/var/log/$app"
+chown -R "$app:$app" "$install_dir"
+chmod 750 "$install_dir"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
