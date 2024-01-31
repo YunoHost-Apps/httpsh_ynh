@@ -22,7 +22,7 @@ This package is based on two projects:
 * [httpsh](https://github.com/leshniak/httpsh) is a login script that is called by ttyd
 
 
-**Shipped version:** 1.7.4~ynh2
+**Shipped version:** 1.7.4~ynh3
 
 ## Screenshots
 
