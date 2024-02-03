@@ -22,7 +22,7 @@ chmod +x "$install_dir/ttyd"
 # Get only the ttyd-login script
 ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-login"
-ynh_secure_remove --file="$installdir/httpsh"
+ynh_secure_remove --file="$install_dir/httpsh"
 
 ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
