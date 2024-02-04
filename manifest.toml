@@ -7,7 +7,7 @@ name = "httpsh on ttyd"
 description.en = "Connect to your server via a terminal in the browser"
 description.fr = "Connectez-vous à votre serveur via un terminal dans le navigateur web"
 
-version = "1.7.4~ynh2"
+version = "1.7.4~ynh3"
 
 maintainers = ["Salamandar"]
 
@@ -71,6 +71,8 @@ ram.runtime = "10M"
     [resources.sources.httpsh]
     url = "https://github.com/leshniak/httpsh/archive/7d80fac0d48f30e29eaff9a7471399c19ad31518.tar.gz"
     sha256 = "cc7354752e80e1563e80271b7253c0f293346cd46cdfe4858dcf68865e573d30"
+
+    autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 

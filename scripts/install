@@ -18,10 +18,11 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 
 ynh_setup_source --source_id=ttyd --dest_dir="$install_dir"
 chmod +x "$install_dir/ttyd"
-ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 
-# TODO: copy files where needed
+# Get only the ttyd-login script
+ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
 mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-login"
+ynh_secure_remove --file="$install_dir/httpsh"
 
 ynh_add_config --template="../conf/ttyd_httpsh.conf" --destination="$install_dir/ttyd_httpsh.conf"
 
@@ -39,13 +40,9 @@ ynh_add_systemd_config
 
 yunohost service add "$app" --description="httpsh on ttyd web terminal" --log="/var/log/$app/$app.log"
 
-mkdir "/var/log/$app"
-touch "/var/log/$app/$app.log"
-
+ynh_use_logrotate
 chown -R "$app:$app" "/var/log/$app"
 chmod 750 "/var/log/$app"
-
-ynh_use_logrotate
 
 ynh_add_fail2ban_config --logpath="/var/log/$app/$app.log" --failregex="^error: maximum authentication attempts exceeded for <F-USER>.*</F-USER> from <HOST>$"
 
