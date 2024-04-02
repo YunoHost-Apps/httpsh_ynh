@@ -24,11 +24,11 @@ ynh_systemd_action --service_name="$app" --action="stop" --log_path="/var/log/$a
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --source_id=ttyd --dest_dir="$install_dir"
+ynh_setup_source --source_id=ttyd --dest_dir="$install_dir" --full_replace=1
 chmod +x "$install_dir/ttyd"
 
 # Get only the ttyd-login script
-ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh"
+ynh_setup_source --source_id=httpsh --dest_dir="$install_dir/httpsh" --full_replace=1
 mv "$install_dir/httpsh/usr/local/bin/ttyd-login" "$install_dir/httpsh-ttyd-login"
 ynh_secure_remove --file="$install_dir/httpsh"
 
