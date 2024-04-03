@@ -49,17 +49,17 @@ ram.runtime = "10M"
     extract = false
     rename = "ttyd"
 
-    armhf.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.5/ttyd.armhf"
-    armhf.sha256 = "5f56a9a7c82f073a31fd214010a1aa7bf6125a5bcd08e03afb6e054a22df3245"
+    armhf.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.armhf"
+    armhf.sha256 = "8240c8438b68d3b10b0e1a4e7c914d70fca6a7606b516f40bf40adfa1044d801"
 
-    arm64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.5/ttyd.aarch64"
-    arm64.sha256 = "110b083e658f462c81b4efb9949d899bce3edd361721359a8948cf47c66d1d39"
+    arm64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.aarch64"
+    arm64.sha256 = "b38acadd89d1d396a0f5649aa52c539edbad07f4bc7348b27b4f4b7219dd4165"
 
-    i386.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.5/ttyd.i686"
-    i386.sha256 = "43b6ed68c12a48bff9f14292f87a05f6542e29946ca9291552420d88b2bc6029"
+    i386.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.i686"
+    i386.sha256 = "93e112e19c9c0dcc717e98bdba0f43fc50f0c74ae1ba5b572772c507654ed19c"
 
-    amd64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.5/ttyd.x86_64"
-    amd64.sha256 = "d6bd59acb4ecd65f527e94010f901b37a8cc2fff5b5e7c9eec2853e2977f6ffb"
+    amd64.url = "https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.x86_64"
+    amd64.sha256 = "8a217c968aba172e0dbf3f34447218dc015bc4d5e59bf51db2f2cd12b7be4f55"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.upstream = "https://github.com/tsl0922/ttyd"
