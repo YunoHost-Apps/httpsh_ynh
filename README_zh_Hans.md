@@ -3,7 +3,7 @@
 请勿手动编辑。
 -->
 
-# YunoHost 的 httpsh on ttyd
+# YunoHost 上的 httpsh on ttyd
 
 [![集成程度](https://dash.yunohost.org/integration/httpsh.svg)](https://dash.yunohost.org/appci/app/httpsh) ![工作状态](https://ci-apps.yunohost.org/ci/badges/httpsh.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/httpsh.maintain.svg)
 
