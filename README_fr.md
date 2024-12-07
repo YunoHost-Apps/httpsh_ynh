@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # httpsh on ttyd pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/httpsh.svg)](https://ci-apps.yunohost.org/ci/apps/httpsh/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/httpsh.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/httpsh.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/httpsh)](https://ci-apps.yunohost.org/ci/apps/httpsh/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/httpsh)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/httpsh)
 
 [![Installer httpsh on ttyd avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=httpsh)
 
@@ -21,7 +23,7 @@ Ce paquet est basé sur deux projets :
 * [httpsh](https://github.com/leshniak/httpsh) est un script de connection appelé par ttyd
 
 
-**Version incluse :** 1.7.4~ynh4
+**Version incluse :** 1.7.7~ynh1
 
 ## Captures d’écran
 

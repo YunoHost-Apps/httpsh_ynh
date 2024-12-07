@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # httpsh on ttyd untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/httpsh.svg)](https://ci-apps.yunohost.org/ci/apps/httpsh/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/httpsh.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/httpsh.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/httpsh)](https://ci-apps.yunohost.org/ci/apps/httpsh/)
+![Status kerja](https://apps.yunohost.org/badge/state/httpsh)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/httpsh)
 
 [![Pasang httpsh on ttyd dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=httpsh)
 
@@ -22,7 +24,7 @@ This package is based on two projects:
 * [httpsh](https://github.com/leshniak/httpsh) is a login script that is called by ttyd
 
 
-**Versi terkirim:** 1.7.4~ynh4
+**Versi terkirim:** 1.7.7~ynh1
 
 ## Tangkapan Layar
 

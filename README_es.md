@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # httpsh on ttyd para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/httpsh.svg)](https://ci-apps.yunohost.org/ci/apps/httpsh/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/httpsh.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/httpsh.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/httpsh)](https://ci-apps.yunohost.org/ci/apps/httpsh/)
+![Estado funcional](https://apps.yunohost.org/badge/state/httpsh)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/httpsh)
 
 [![Instalar httpsh on ttyd con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=httpsh)
 
@@ -22,7 +24,7 @@ This package is based on two projects:
 * [httpsh](https://github.com/leshniak/httpsh) is a login script that is called by ttyd
 
 
-**Versión actual:** 1.7.4~ynh4
+**Versión actual:** 1.7.7~ynh1
 
 ## Capturas
 
