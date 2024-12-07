@@ -7,7 +7,7 @@ name = "httpsh on ttyd"
 description.en = "Connect to your server via a terminal in the browser"
 description.fr = "Connectez-vous à votre serveur via un terminal dans le navigateur web"
 
-version = "1.7.4~ynh4"
+version = "1.7.7~ynh1"
 
 maintainers = ["Salamandar"]
 
